@@ -9,27 +9,27 @@
     <table>
         <tr>
             <td>First name:</td>
-            <td><input type="text" th:field="*{firstName}"/></td>
+            <td><input type="text" th:class="${#fields.hasErrors('firstName')} ? 'form-control is-invalid': ''" th:field="*{firstName}"/></td>
             <td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First name error</td>
         </tr>
         <tr>
             <td>Last name:</td>
-            <td><input type="text" th:field="*{lastName}"/></td>
+            <td><input type="text" th:class="${#fields.hasErrors('lastName')} ? 'form-control is-invalid': ''" th:field="*{lastName}"/></td>
             <td th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last name error</td>
         </tr>
         <tr>
             <td>Book's ISBN:</td>
-            <td><input type="text" th:field="*{isbn}"/></td>
+            <td><input type="text" th:class="${#fields.hasErrors('isbn')} ? 'form-control is-invalid': ''" th:field="*{isbn}"/></td>
             <td th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}">ISBN error</td>
         </tr>
         <tr>
             <td>Book's title:</td>
-            <td><input type="text" th:field="*{title}"/></td>
+            <td><input type="text" th:class="${#fields.hasErrors('title')} ? 'form-control is-invalid': ''" th:field="*{title}"/></td>
             <td th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title error</td>
         </tr>
         <tr>
             <td>
-                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="submit" class="btn btn-success">Submit</button>
             </td>
         </tr>
     </table>
